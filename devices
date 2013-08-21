@@ -1,0 +1,14 @@
+MasterBrick	62eUEf	2.1.2
+	from tinkerforge.brick_master import Master
+
+LCD 20x4	9ew	2.0.6
+	from tinkerforge.bricklet_lcd_20x4 import LCD20x4
+
+Rotary Poti	8Cu	2.0.1
+	from tinkerforge.bricklet_rotary_poti import RotaryPoti
+
+IO - 16		aFh	2.0.2
+	from tinkerforge.bricklet_io16 import IO16
+
+Stepper		6jDX7j	2.0.4
+	from tinkerforge.brick_stepper import Stepper
