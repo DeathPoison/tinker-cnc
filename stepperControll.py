@@ -16,6 +16,7 @@ from time import sleep # time delay
 import sys # need for unicode
 import types # need for unicode
 
+# Callback LCD Button PRESSED
 def cb_pressed(i):
     print('Pressed: ' + str(i))
     if str(i) == '2':
@@ -24,6 +25,7 @@ def cb_pressed(i):
         else:
             lcd.backlight_on() # Turn backlight on
 
+# Callback LCD Button RELEASED
 def cb_released(i):
     print('Released: ' + str(i))
 
@@ -116,9 +118,11 @@ def unicode_to_ks0066u(string):
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(prog='stepperControll' ,description='Test Stepper Motor!')
-    parser.add_argument('device', metavar='N', type=str, nargs='+', help='a device name e.g. stepper or lcd')
-    parser.add_argument('idd', metavar='id', type=str, nargs='+', help='id of device')
-    parser.add_argument('steps', metavar='steps', type=int, nargs='+', default=50, help='integer')
+    #parser.add_argument('device', metavar='N', type=str, nargs='+', help='a device name e.g. stepper or lcd')
+    #parser.add_argument('idd', metavar='id', type=str, nargs='+', help='id of device')
+    
+    parser.add_argument('-s', action='store', dest='steps', type=int, default=50, help='Store a simple value')    
+    #parser.add_argument('steps', metavar='steps', nargs='+',  help='integer')
 
     args = parser.parse_args()
 
