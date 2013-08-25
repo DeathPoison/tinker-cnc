@@ -123,8 +123,8 @@ if __name__ == "__main__":
     
     parser.add_argument('-s', action='store', dest='steps', type=int, default=50, help='Store a simple value')    
     #parser.add_argument('steps', metavar='steps', nargs='+',  help='integer')
-
     args = parser.parse_args()
+    #print args.steps - yes is working! (test without devices..^^)
 
     ipcon =     IPConnection() # Create IP connection
     lcd =       LCD20x4(LUID, ipcon) # Create device object
