@@ -4,7 +4,7 @@
 import argparse
 
 parser = argparse.ArgumentParser(description='Test Stepper Motor!')
-parser.add_argument('device', required=False, help='a device name e.g. stepper or lcd') # metavar='N', type=str,  nargs='+',
+parser.add_argument('device', help='a device name e.g. stepper or lcd') # metavar='N', type=str, required=False, nargs='+',
 parser.add_argument('id', metavar='M', type=str, nargs='+', help='id of device')
 parser.add_argument('steps', metavar='steps', type=int, nargs='+', help='a device name e.g. stepper or lcd')
 
